@@ -39,4 +39,7 @@ fs.appendFile('./notes/modules/coreModules/file-module/output/asyncFile.txt', ' 
     }else{
         console.log('adding new context to file in async approch', res);
     }
-})
+});
+
+// delete a file 
+fs.unlinkSync('./notes/modules/coreModules/file-module/output/delete.txt');
