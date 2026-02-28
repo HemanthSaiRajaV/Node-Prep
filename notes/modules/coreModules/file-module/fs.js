@@ -25,3 +25,18 @@ fs.readFile('./notes/modules/coreModules/file-module/output/readFile.txt', 'utf-
         console.log('reading file async is done', res);
     }
 })
+
+// write in existing file. known as apend whenever user write new context in file sync way
+
+fs.appendFileSync('./notes/modules/coreModules/file-module/output/syncFile.txt', ', How are you?')
+
+
+// write in existing file. known as apend whenever user write new context in file async way
+
+fs.appendFile('./notes/modules/coreModules/file-module/output/asyncFile.txt', ' 8888888 92', (err, res)=>{
+    if(err){
+        console.log('printError', err);
+    }else{
+        console.log('adding new context to file in async approch', res);
+    }
+})
