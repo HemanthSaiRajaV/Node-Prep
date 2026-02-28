@@ -1,0 +1,18 @@
+{
+  "name": "interview-prep",
+  "version": "1.0.0",
+  "description": "node",
+  "keywords": [
+    "node"
+  ],
+  "license": "ISC",
+  "author": "hemanth vanasetti",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "modulus": "^6.5.0"
+  }
+}
