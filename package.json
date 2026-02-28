@@ -7,9 +7,10 @@
   ],
   "license": "ISC",
   "author": "hemanth vanasetti",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "start": "node run-all.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
