@@ -1,10 +1,10 @@
 import { error } from "console";
 import fs from "fs";
 
-// creates the sync file, whenever user changes the data will be updated sync way  
+// ?  creates the sync file, whenever user changes the data will be updated sync way  
 fs.writeFileSync('./notes/modules/file-module/output/syncFile.txt', 'hi hemanth');
 
-// creates the async file, whenever user changes the data will be updated sync way  
+// ?  creates the async file, whenever user changes the data will be updated sync way  
 fs.writeFile('./notes/modules/file-module/output/asyncFile.txt', 'async data have created',(err)=>{
     if(err){
         console.log('print', error)
@@ -17,7 +17,7 @@ fs.writeFile('./notes/modules/file-module/output/asyncFile.txt', 'async data hav
 const readMe = fs.readFileSync('./notes/modules/file-module/output/readFile.txt', 'utf-8');
 console.log('fileData', readMe)
 
-// read the data from the file. whenever user changes the data will be updated async way but syntex is different
+// ?  read the data from the file. whenever user changes the data will be updated async way but syntex is different
 fs.readFile('./notes/modules/file-module/output/readFile.txt', 'utf-8', (err, res)=>{
     if(err){
         console.log('printError', err);
@@ -26,12 +26,12 @@ fs.readFile('./notes/modules/file-module/output/readFile.txt', 'utf-8', (err, re
     }
 })
 
-// write in existing file. known as apend whenever user write new context in file sync way
+// ?  write in existing file. known as apend whenever user write new context in file sync way
 
 fs.appendFileSync('./notes/modules/file-module/output/syncFile.txt', ', How are you?')
 
 
-// write in existing file. known as apend whenever user write new context in file async way
+// ?  write in existing file. known as apend whenever user write new context in file async way
 
 fs.appendFile('./notes/modules/file-module/output/asyncFile.txt', ' 8888888 92', (err, res)=>{
     if(err){
@@ -41,7 +41,7 @@ fs.appendFile('./notes/modules/file-module/output/asyncFile.txt', ' 8888888 92',
     }
 });
 
-// delete a file (ignore if it doesn't exist)
+// ? delete a file (ignore if it doesn't exist)
 try {
     fs.unlinkSync('./notes/modules/file-module/output/delete.txt');
 } catch (e) {
