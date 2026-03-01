@@ -1,0 +1,8 @@
+| Feature      | Buffer                          | Stream                      |
+| ------------ | ------------------------------- | --------------------------- |
+| Type         | Data structure                  | Data handling mechanism     |
+| Purpose      | Stores raw binary data          | Transfers data in chunks    |
+| Memory Usage | Can hold entire data            | Processes small chunks      |
+| Used For     | Binary manipulation             | Large file/network handling |
+| Built On     | Native memory (outside V8 heap) | Uses Buffer internally      |
+| Suitable For | Small/medium data               | Large data (MBs/GBs)        |
