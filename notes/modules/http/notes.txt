@@ -1,0 +1,10 @@
+| Feature           | HTTP                        | HTTPS                              |
+| ----------------- | --------------------------- | ---------------------------------- |
+| Full Form         | HyperText Transfer Protocol | HyperText Transfer Protocol Secure |
+| Security          | ❌ No encryption            | ✅ Encrypted using TLS            |
+| Data Safety       | Data sent as plain text     | Data encrypted (cipher text)       |
+| Port Number       | 8080, 3000                  | 443                                |
+| SSL/TLS           | Not used                    | Required                           |
+| SEO Ranking       | Lower priority              | Higher priority                    |
+| Browser Indicator | No lock icon                | 🔒 Lock icon                       |
+| Vulnerable To     | Man-in-the-middle attacks   | Very difficult to intercept        |
