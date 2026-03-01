@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
     const stream = fs.createReadStream("./notes/modules/Streams/50mb.json", "utf-8");
     stream.on("data", (chunk) => res.write(chunk));
     stream.on("end", () => res.end());
-
 });
 
 app.listen(port, () => {
