@@ -2,10 +2,10 @@ import { error } from "console";
 import fs from "fs";
 
 // creates the sync file, whenever user changes the data will be updated sync way  
-fs.writeFileSync('./notes/modulesES/coreModules/file-module/output/syncFile.txt', 'hi hemanth');
+fs.writeFileSync('./notes/modules/file-module/output/syncFile.txt', 'hi hemanth');
 
 // creates the async file, whenever user changes the data will be updated sync way  
-fs.writeFile('./notes/modulesES/coreModules/file-module/output/asyncFile.txt', 'async data have created',(err)=>{
+fs.writeFile('./notes/modules/file-module/output/asyncFile.txt', 'async data have created',(err)=>{
     if(err){
         console.log('print', error)
     }else{
@@ -14,11 +14,11 @@ fs.writeFile('./notes/modulesES/coreModules/file-module/output/asyncFile.txt', '
 })
 
 // read the data from the file. whenever user changes the data will be updated sync way  
-const readMe = fs.readFileSync('./notes/modulesES/coreModules/file-module/output/readFile.txt', 'utf-8');
+const readMe = fs.readFileSync('./notes/modules/file-module/output/readFile.txt', 'utf-8');
 console.log('fileData', readMe)
 
 // read the data from the file. whenever user changes the data will be updated async way but syntex is different
-fs.readFile('./notes/modulesES/coreModules/file-module/output/readFile.txt', 'utf-8', (err, res)=>{
+fs.readFile('./notes/modules/file-module/output/readFile.txt', 'utf-8', (err, res)=>{
     if(err){
         console.log('printError', err);
     }else{
@@ -28,12 +28,12 @@ fs.readFile('./notes/modulesES/coreModules/file-module/output/readFile.txt', 'ut
 
 // write in existing file. known as apend whenever user write new context in file sync way
 
-fs.appendFileSync('./notes/modulesES/coreModules/file-module/output/syncFile.txt', ', How are you?')
+fs.appendFileSync('./notes/modules/file-module/output/syncFile.txt', ', How are you?')
 
 
 // write in existing file. known as apend whenever user write new context in file async way
 
-fs.appendFile('./notes/modulesES/coreModules/file-module/output/asyncFile.txt', ' 8888888 92', (err, res)=>{
+fs.appendFile('./notes/modules/file-module/output/asyncFile.txt', ' 8888888 92', (err, res)=>{
     if(err){
         console.log('printError', err);
     }else{
@@ -43,7 +43,7 @@ fs.appendFile('./notes/modulesES/coreModules/file-module/output/asyncFile.txt', 
 
 // delete a file (ignore if it doesn't exist)
 try {
-    fs.unlinkSync('./notes/modulesES/coreModules/file-module/output/delete.txt');
+    fs.unlinkSync('./notes/modules/file-module/output/delete.txt');
 } catch (e) {
     if (e.code !== 'ENOENT') {
         throw e;

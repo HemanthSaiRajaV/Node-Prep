@@ -1,4 +1,4 @@
-node ./notes/modules/coreModules/file-module/fs.js
+node ./notes/modules/file-module/coreFs.js
 
 async commends dont need call back function they just need encoding 'utf-8' in bites, with 8 bit code block 
 
