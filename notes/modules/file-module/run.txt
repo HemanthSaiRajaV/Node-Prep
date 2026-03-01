@@ -1,0 +1,5 @@
+
+async commends dont need call back function they just need encoding 'utf-8' in bites, with 8 bit code block 
+where as normal read and write funcation need call back function for error and response also encoding 
+
+Run: node ./notes/modules/file-module/coreFs.js
