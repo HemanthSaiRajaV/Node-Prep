@@ -41,5 +41,11 @@ fs.appendFile('./notes/modulesES/coreModules/file-module/output/asyncFile.txt', 
     }
 });
 
-// delete a file 
-fs.unlinkSync('./notes/modulesES/coreModules/file-module/output/delete.txt');
+// delete a file (ignore if it doesn't exist)
+try {
+    fs.unlinkSync('./notes/modulesES/coreModules/file-module/output/delete.txt');
+} catch (e) {
+    if (e.code !== 'ENOENT') {
+        throw e;
+    }
+}

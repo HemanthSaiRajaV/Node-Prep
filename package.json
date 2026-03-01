@@ -2,16 +2,13 @@
   "name": "interview-prep",
   "version": "1.0.0",
   "description": "node",
-  "keywords": [
-    "node"
-  ],
+  "keywords": ["nodejs", "interview", "prep"],
   "license": "ISC",
   "author": "hemanth vanasetti",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node run-all.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^5.2.1",
