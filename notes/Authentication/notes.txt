@@ -1,0 +1,2 @@
+npm i jsonwebtoken
+https://www.jwt.io/
