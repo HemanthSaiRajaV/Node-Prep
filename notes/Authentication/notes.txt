@@ -1,2 +1,4 @@
 npm i jsonwebtoken
 https://www.jwt.io/
+
+node e:/Node-Prep/notes/Authentication/JWT.js
