@@ -1,0 +1,92 @@
+# MongoDB Connection Examples
+
+This folder contains examples for connecting to MongoDB using two different methods.
+
+
+## Prerequisites
+
+1. Install MongoDB locally or use MongoDB Atlas (cloud)
+2. Install Node.js
+3. Install required npm packages:
+
+
+## Installation
+
+```
+bash
+# For MongoDB Native Driver
+npm install mongodb
+
+# For Mongoose ODM
+npm install mongoose
+
+# Or install both
+npm install mongodb mongoose
+```
+
+
+## Running the Examples
+
+### Method 1: MongoDB Native Driver
+Uncomment the following line in mongoConnection.js:
+```
+javascript
+connectWithNativeDriver();
+```
+
+Then run:
+```
+bash
+node notes/MongooDB/mongoConnection.js
+```
+
+
+### Method 2: Mongoose ODM
+Uncomment the following line in mongoConnection.js:
+```
+javascript
+connectWithMongoose();
+```
+
+Then run:
+```
+bash
+node notes/MongooDB/mongoConnection.js
+```
+
+
+## MongoDB Connection URI Format
+
+### Local MongoDB
+```
+mongodb://localhost:27017/mydatabase
+```
+
+### MongoDB Atlas (Cloud)
+```
+mongodb+srv://username:password@cluster-name.mongodb.net/mydatabase?retryWrites=true&w=majority
+```
+
+### With Options
+```
+mongodb://localhost:27017/mydatabase?maxPoolSize=20&wtimeoutMS=2500
+```
+
+
+## Common MongoDB Operations (CRUD)
+
+| Operation | Native Driver | Mongoose |
+|-----------|---------------|----------|
+| Create    | insertOne()   | create() / save() |
+| Read      | find()        | find() |
+| Read One  | findOne()     | findOne() |
+| Update    | updateOne()   | findOneAndUpdate() |
+| Delete    | deleteOne()   | findOneAndDelete() |
+
+
+## Notes
+
+- Make sure MongoDB server is running before executing the examples
+- For MongoDB Atlas, ensure your IP address is whitelisted
+- The native driver gives you more control but requires more code
+- Mongoose provides schema validation and a more organized structure
