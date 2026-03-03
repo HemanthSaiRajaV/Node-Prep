@@ -69,7 +69,20 @@
       const messagesDiv = document.getElementById('messages');
       const msgElement = document.createElement('div');
       msgElement.className = 'message user';
-      msgElement.textContent = `[${data.timestamp}] ${data.id}: ${data.message}`;
+      
+      // Format timestamp to 12-hour format (e.g., 7:00PM)
+      const date = new Date(data.timestamp);
+      const hours = date.getHours();
+      const minutes = date.getMinutes();
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      const formattedHours = hours % 12 || 12;
+      const formattedMinutes = minutes.toString().padStart(2, '0');
+      const timeString = `${formattedHours}:${formattedMinutes}${ampm}`;
+      
+      // Show username or "Unknown" if not provided
+      const username = data.username || 'Unknown';
+      
+      msgElement.textContent = `[${timeString}] ${username}: ${data.message}`;
       messagesDiv.appendChild(msgElement);
       messagesDiv.scrollTop = messagesDiv.scrollHeight;
     });

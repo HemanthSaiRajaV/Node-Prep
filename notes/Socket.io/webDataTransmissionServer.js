@@ -45,6 +45,7 @@ io.on('connection', (socket) => {
     if (data.room) {
       io.to(data.room).emit('chat-message', {
         id: socket.id,
+        username: data.username,
         message: data.message,
         timestamp: new Date().toISOString()
       });
@@ -52,6 +53,7 @@ io.on('connection', (socket) => {
       // Broadcast to all clients
       io.emit('chat-message', {
         id: socket.id,
+        username: data.username,
         message: data.message,
         timestamp: new Date().toISOString()
       });
