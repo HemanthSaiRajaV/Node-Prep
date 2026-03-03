@@ -1,0 +1,12 @@
+node notes/middleWare/simple-middleware.js 
+Open browser and visit: http://localhost:3005
+
+
+## Key Points
+
+- Middleware functions have access to `req`, `res`, and `next`
+- Always call `next()` to pass control to the next middleware
+- Error-handling middleware must have 4 parameters
+- Middleware can modify req/res objects
+- Middleware can end the response cycle
+- Order of middleware matters - define before routes
